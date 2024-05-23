@@ -1,0 +1,27 @@
+{
+  "name": "weather_snap",
+  "version": "1.0.0",
+  "description": "In progress. Goals is to allow users to save a snapshot of current weather conditions and retrieve them later.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jerscape/weather_snap.git"
+  },
+  "author": "Jeremy Dutton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerscape/weather_snap/issues"
+  },
+  "homepage": "https://github.com/Jerscape/weather_snap#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fetch": "^1.1.0",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5"
+  }
+}
