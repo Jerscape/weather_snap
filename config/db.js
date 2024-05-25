@@ -1,11 +1,6 @@
 const { Pool } = require("pg");
 require('dotenv').config({ path: '../.env' })
 
-console.log('PGHOST:', process.env.PGHOST);
-console.log('PGDATABASE:', process.env.PGDATABASE);
-console.log('PGUSER:', process.env.PGUSER);
-console.log('PGPASSWORD:', process.env.PGPASSWORD ? '****' : 'Not set');
-console.log('PGPORT:', process.env.PGPORT);
 
 //connection parameters
 const dbParams = {
