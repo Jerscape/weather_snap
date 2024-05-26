@@ -9,7 +9,8 @@
 <body>
   <%- include('partials/header') %>
   <main>
-    <h1><%= message %></h1>
+    
+    <p>Temperature: <%= weather.main.temp %> °C</p>
     <%- include('partials/current_weather') %>
   </main>
   <%- include('partials/footer') %>
