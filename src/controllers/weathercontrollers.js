@@ -1,4 +1,4 @@
-const weatherModel = require('/models/weathermodel');
+const { saveSnapData } = require('/models/weatherModel');
 
 const saveSnap = async (req, res) => {
   const { data } = req.body;
@@ -8,7 +8,7 @@ const saveSnap = async (req, res) => {
   }
 
   try {
-    await weatherModel.saveSnapData(data);
+    await saveSnapData(data);;
     res.status(200).json({ message: 'Data received sucesfully' });
 
 

@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const axios = require('axios')
 require('dotenv').config();
 
 
@@ -10,8 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const weatherRouter = require('./src/routes/weather-routes');
-
 app.use(morgan('dev'));
+app.use(express.json()); // Middleware to parse JSON bodies
+
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
@@ -46,19 +46,12 @@ app.get('/', async (req, res) => {
      });
   
   }
-  //https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lon}&appid=${apiKey}&units=metric
-  // Render the index.ejs template with some example data
-  // const exampleData = {
-  //   title: 'My Express App',
-  //   message: 'Hello, World!',
-  //   // weatherData: {
-  //   //   name: 'Example City',
-  //   //   temp: 25,
-  //   //   description: 'Sunny'
-  //   // }
-  // };
   
 });
+
+
+// Use weather router
+app.use('/weather', weatherRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

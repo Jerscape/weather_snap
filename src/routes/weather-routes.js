@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const weatherController = require('../controllers/weathercontrollers');
+const { saveSnapData } = require('/models/weatherModel');
 
 router.post('/snap', weatherController.saveSnap);
 

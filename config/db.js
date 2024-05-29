@@ -12,10 +12,10 @@ const dbParams = {
 };
 
 //creates a pool instance
-const db = new Pool(dbParams);
+const pool = new Pool(dbParams);
 
 //test the database connection
-db.connect()
+pool.connect()
   .then(client => {
     console.log("sucessful connection to db");
     return client.query('SELECT * FROM weather_data')
@@ -29,3 +29,5 @@ db.connect()
       })
   })
   .catch(e => console.error('Error connecting to the database', e));
+
+module.exports = pool;
