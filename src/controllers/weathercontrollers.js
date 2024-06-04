@@ -1,4 +1,4 @@
-const { saveSnapData } = require('/models/weatherModel');
+const { saveSnapData } = require('../models/weathermodel');
 
 const saveSnap = async (req, res) => {
   const { data } = req.body;
